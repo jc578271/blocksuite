@@ -4,6 +4,7 @@ import { fileURLToPath } from 'url';
 import { defineConfig, loadEnv } from 'vite';
 import istanbul from 'vite-plugin-istanbul';
 import wasm from 'vite-plugin-wasm';
+import { viteSingleFile } from "vite-plugin-singlefile"
 
 import { hmrPlugin } from './scripts/hmr-plugin';
 
@@ -37,37 +38,41 @@ export default ({ mode }) => {
           forceBuildInstrument: true,
         }),
       wasm(),
+      viteSingleFile(),
     ],
     build: {
       target: 'ES2022',
       sourcemap: true,
       rollupOptions: {
         input: {
-          main: resolve(__dirname, 'index.html'),
-          'starter/': resolve(__dirname, 'starter/index.html'),
+          // main: resolve(__dirname, 'index.html'),
+          // 'starter/': resolve(__dirname, 'starter/index.html'),
           'examples/basic/doc': resolve(
             __dirname,
             'examples/basic/doc/index.html'
           ),
-          'examples/basic/edgeless': resolve(
-            __dirname,
-            'examples/basic/edgeless/index.html'
-          ),
-          'examples/multiple-editors/doc-doc': resolve(
-            __dirname,
-            'examples/multiple-editors/doc-doc/index.html'
-          ),
-          'examples/multiple-editors/doc-edgeless': resolve(
-            __dirname,
-            'examples/multiple-editors/doc-edgeless/index.html'
-          ),
-          'examples/multiple-editors/edgeless-edgeless': resolve(
-            __dirname,
-            'examples/multiple-editors/edgeless-edgeless/index.html'
-          ),
-          'examples/inline': resolve(__dirname, 'examples/inline/index.html'),
-          'examples/store': resolve(__dirname, 'examples/store/index.html'),
+          // 'examples/basic/edgeless': resolve(
+          //   __dirname,
+          //   'examples/basic/edgeless/index.html'
+          // ),
+          // 'examples/multiple-editors/doc-doc': resolve(
+          //   __dirname,
+          //   'examples/multiple-editors/doc-doc/index.html'
+          // ),
+          // 'examples/multiple-editors/doc-edgeless': resolve(
+          //   __dirname,
+          //   'examples/multiple-editors/doc-edgeless/index.html'
+          // ),
+          // 'examples/multiple-editors/edgeless-edgeless': resolve(
+          //   __dirname,
+          //   'examples/multiple-editors/edgeless-edgeless/index.html'
+          // ),
+          // 'examples/inline': resolve(__dirname, 'examples/inline/index.html'),
+          // 'examples/store': resolve(__dirname, 'examples/store/index.html'),
         },
+        output: {
+          inlineDynamicImports: false,
+        }
       },
     },
     resolve: {

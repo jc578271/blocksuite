@@ -456,8 +456,8 @@ export class AffineDragHandleWidget extends WidgetElement<
     this._anchorBlockId = '';
     this._anchorBlockPath = null;
 
-    if (this._dragHandleContainer)
-      this._dragHandleContainer.style.display = 'none';
+    // if (this._dragHandleContainer)
+    //   this._dragHandleContainer.style.display = 'none';
 
     if (force) this._reset();
   };
@@ -1476,12 +1476,13 @@ export class AffineDragHandleWidget extends WidgetElement<
 
   override connectedCallback() {
     super.connectedCallback();
-    this.handleEvent('pointerMove', this._throttledPointerMoveHandler);
-    this.handleEvent('click', this._clickHandler);
-    this.handleEvent('dragStart', this._dragStartHandler);
-    this.handleEvent('dragMove', this._dragMoveHandler);
-    this.handleEvent('dragEnd', this._dragEndHandler);
-    this.handleEvent('pointerOut', this._pointerOutHandler);
+    // this.handleEvent('pointerUp', this._throttledPointerMoveHandler);
+    // this.handleEvent('pointerDown', this._throttledPointerMoveHandler);
+    // this.handleEvent('click', this._clickHandler);
+    // this.handleEvent('dragStart', this._dragStartHandler);
+    // this.handleEvent('dragMove', this._dragMoveHandler);
+    // this.handleEvent('dragEnd', this._dragEndHandler);
+    // this.handleEvent('pointerOut', this._pointerOutHandler);
     this.handleEvent('beforeInput', () => this._hide());
   }
 

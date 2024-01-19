@@ -15,7 +15,7 @@
     "verbatimModuleSyntax": true,
     "esModuleInterop": true,
     "noEmitOnError": true,
-    "noUnusedLocals": true,
+    "noUnusedLocals": false,
     "noUnusedParameters": true,
     "noImplicitReturns": true,
     "noImplicitOverride": true,

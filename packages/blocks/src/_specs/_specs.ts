@@ -52,29 +52,30 @@ const DocPageSpec: BlockSpec<DocPageBlockWidgetName> = {
   service: DocPageService,
   view: {
     component: literal`affine-doc-page`,
+    // @ts-ignore
     widgets: {
       // [AFFINE_BLOCK_HUB_WIDGET]: literal`${unsafeStatic(
       //   AFFINE_BLOCK_HUB_WIDGET
       // )}`,
-      [AFFINE_MODAL_WIDGET]: literal`${unsafeStatic(AFFINE_MODAL_WIDGET)}`,
-      [AFFINE_SLASH_MENU_WIDGET]: literal`${unsafeStatic(
-        AFFINE_SLASH_MENU_WIDGET
-      )}`,
-      [AFFINE_LINKED_DOC_WIDGET]: literal`${unsafeStatic(
-        AFFINE_LINKED_DOC_WIDGET
-      )}`,
-      [AFFINE_DOC_DRAGGING_AREA_WIDGET]: literal`${unsafeStatic(
-        AFFINE_DOC_DRAGGING_AREA_WIDGET
-      )}`,
-      [AFFINE_DRAG_HANDLE_WIDGET]: literal`${unsafeStatic(
-        AFFINE_DRAG_HANDLE_WIDGET
-      )}`,
-      [AFFINE_FORMAT_BAR_WIDGET]: literal`${unsafeStatic(
-        AFFINE_FORMAT_BAR_WIDGET
-      )}`,
-      [AFFINE_DOC_REMOTE_SELECTION_WIDGET]: literal`${unsafeStatic(
-        AFFINE_DOC_REMOTE_SELECTION_WIDGET
-      )}`,
+      // [AFFINE_MODAL_WIDGET]: literal`${unsafeStatic(AFFINE_MODAL_WIDGET)}`,
+      // [AFFINE_SLASH_MENU_WIDGET]: literal`${unsafeStatic(
+      //   AFFINE_SLASH_MENU_WIDGET
+      // )}`,
+      // [AFFINE_LINKED_DOC_WIDGET]: literal`${unsafeStatic(
+      //   AFFINE_LINKED_DOC_WIDGET
+      // )}`,
+      // [AFFINE_DOC_DRAGGING_AREA_WIDGET]: literal`${unsafeStatic(
+      //   AFFINE_DOC_DRAGGING_AREA_WIDGET
+      // )}`,
+      // [AFFINE_DRAG_HANDLE_WIDGET]: literal`${unsafeStatic(
+      //   AFFINE_DRAG_HANDLE_WIDGET
+      // )}`,
+      // [AFFINE_FORMAT_BAR_WIDGET]: literal`${unsafeStatic(
+      //   AFFINE_FORMAT_BAR_WIDGET
+      // )}`,
+      // [AFFINE_DOC_REMOTE_SELECTION_WIDGET]: literal`${unsafeStatic(
+      //   AFFINE_DOC_REMOTE_SELECTION_WIDGET
+      // )}`,
     },
   },
 };

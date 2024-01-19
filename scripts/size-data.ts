@@ -89,7 +89,7 @@ async function generateBundle(preset: Preset) {
   });
 
   const generated = await result.generate({
-    inlineDynamicImports: true,
+    inlineDynamicImports: false,
   });
   const bundled = generated.output[0].code;
   const minified = (
